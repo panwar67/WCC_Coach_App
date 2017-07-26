@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#f9c2c2"
+    tools:context="com.example.kashif.coachauthapp2.AddNewPostActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/activity_blog_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Select Image(optional)"
+                android:gravity="center" />
+
+
+            <ImageView
+                android:id="@+id/blog_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:backgroundTint="#f9f2f2"
+                android:background="@drawable/input_edit_text_style"
+                android:src="@drawable/ic_add_a_photo_black_24dp"/>
+
+            <EditText
+                android:id="@+id/blog_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:hint="Post Title"
+                android:backgroundTint="#fff"
+                android:background="@drawable/input_edit_text_style"/>
+
+            <EditText
+                android:id="@+id/blog_description_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:hint="Post Description"
+                android:backgroundTint="#fff"
+                android:background="@drawable/input_edit_text_style"/>
+
+            <Button
+                android:id="@+id/submit_post_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="POST"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/button_stroke_background" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

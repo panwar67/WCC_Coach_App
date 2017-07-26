@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_player_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kashif.coachauthapp2.PlayerProfileEditActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d4e7e3"
+        android:orientation="horizontal">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/user_image_iv"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/user_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textColor="@color/colorAccent"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_email_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:hint="E-mail Id"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/lblDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Date of Birth"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="8dp"
+                        android:textSize="20sp"
+                        android:background="@drawable/input_edit_text_style" />
+
+                    <Button
+                        android:id="@+id/btnChangeDate"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/ic_interface" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Mobile No."
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/user_mobile_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:inputType="number"
+                    android:layout_marginTop="5dp"
+                    android:maxLength="10"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:background="@drawable/input_edit_text_style"
+                    android:hint="Mobile No." />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Skills"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/user_skills_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:background="@drawable/input_edit_text_style"
+                    android:hint="Skills seperated by Commas(,)" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Achievement"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/user_achievement_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:background="@drawable/input_edit_text_style"
+                    android:hint="Achievement seperated by Commas(,)" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="City"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/user_address_city_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:background="@drawable/input_edit_text_style"
+                    android:hint="city" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="PLAYING DETAILS"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Skills"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="WicketKeeper"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorAccent" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+
+                    <Spinner
+                        android:id="@+id/user_skill_set_primary_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".35">
+
+                    </Spinner>
+
+                    <Spinner
+                        android:id="@+id/user_skill_set_secondary_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".35">
+
+                    </Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/user_batting_style__tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:textStyle="bold"
+                        android:text="Batting Hand"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/user_bowling_style__tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Bowling Hand"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <Spinner
+                        android:id="@+id/user_batsman_skill_set_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                    </Spinner>
+
+                    <Spinner
+                        android:id="@+id/user_bowler_skill_set_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                    </Spinner>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_stroke_background"
+                    android:text="Done"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

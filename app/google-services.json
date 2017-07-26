@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "429693802025",
+    "firebase_url": "https://coachauthapp-9555c.firebaseio.com",
+    "project_id": "coachauthapp-9555c",
+    "storage_bucket": "coachauthapp-9555c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429693802025:android:b6b87a5a3bef0402",
+        "android_client_info": {
+          "package_name": "com.example.kashif.coachauthapp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429693802025-8a278li0jpicf7stsghfl66bhtt6vtql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kashif.coachauthapp1",
+            "certificate_hash": "bfec8f98dcd21a823f09da81d81f530f9229957a"
+          }
+        },
+        {
+          "client_id": "429693802025-tuifieffn6n1hvvan2vt0a4s68j76fd1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kashif.coachauthapp1",
+            "certificate_hash": "b55fac643a1b84138ae8db0ca298819717d813aa"
+          }
+        },
+        {
+          "client_id": "429693802025-4ebqqvst39764ofr57h0gubh52c33mv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTQyPc97wKIoXfd60cP2OKgaDji3rnhEs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429693802025-4ebqqvst39764ofr57h0gubh52c33mv0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429693802025:android:53c7583650aa8568",
+        "android_client_info": {
+          "package_name": "com.example.kashif.coachauthapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429693802025-l376ohl6fqk5fchqamhmktnkh7a1v1ba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kashif.coachauthapp2",
+            "certificate_hash": "bfec8f98dcd21a823f09da81d81f530f9229957a"
+          }
+        },
+        {
+          "client_id": "429693802025-4ebqqvst39764ofr57h0gubh52c33mv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTQyPc97wKIoXfd60cP2OKgaDji3rnhEs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429693802025-4ebqqvst39764ofr57h0gubh52c33mv0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">WCC</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="player">Player</string>
+    <string name="parent">Parent</string>
+    <string name="coach">Coach</string>
+
+
+    <string name="facebook_app_id">190029548193108</string>
+    <string name="fb_login_protocol_scheme">fb190029548193108</string>
+
+
+    <string-array name="user_primary_skill_set_array">
+
+        <item>Batsman</item>
+        <item>Bowler</item>
+        <item>All Rounder</item>
+
+
+    </string-array>
+    <string-array name="user_secondary_skill_set_array">
+        <item>WicketKeeper</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="user_batting_skill_set_array">
+        <item>Right Hand Batsman</item>
+        <item>Left Hand Batsman</item>
+    </string-array>
+
+    <string-array name="user_bowling_skill_set_array">
+        <item>Right Hand Bowler</item>
+        <item>Left Hand Bowler</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_receipt_black_24dp"
+            android:title="News &amp; Posts" />
+
+        <item
+            android:id="@+id/nav_coach_profile"
+            android:icon="@drawable/my_profile_icon"
+            android:title="My Profile" />
+
+
+        <item
+            android:id="@+id/nav_add_new_post"
+            android:icon="@drawable/ic_add_circle_black_24dp"
+            android:title="Add New Post" />
+
+        <item
+            android:id="@+id/nav_select_team"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Select Team" />
+
+        <item
+            android:id="@+id/nav_view_team_details"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:title="Show Teams" />
+
+        <item
+            android:id="@+id/nav_see_players"
+            android:icon="@drawable/follow_people_icon"
+            android:title="See Players" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Logout" />
+    </group>
+
+
+</menu>
