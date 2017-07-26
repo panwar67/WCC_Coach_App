@@ -31,7 +31,7 @@
         <ImageView
             android:id="@+id/blog_image"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:scaleType="fitXY"
             android:layout_gravity="center"
             android:adjustViewBounds="true"

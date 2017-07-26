@@ -2,7 +2,6 @@ package com.example.kashif.coachauthapp2;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,6 +11,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -166,18 +166,25 @@ public class CoachProfileEditActivity extends AppCompatActivity {
 
     public void coach_Details_submit() {
 
-        coach_dob = tvDisplayDate.getText().toString();
-        coach_city = coach_city_et.getText().toString();
-        coach_experience = coach_experience_et.getText().toString();
-        coach_brief = coach_brief_et.getText().toString();
-        coach_mobile = coach_mobile_et.getText().toString();
-        coach_details_hashmap = new HashMap<>();
-        coach_details_hashmap.put("coach_dob", coach_dob);
-        coach_details_hashmap.put("coach_city", coach_city);
-        coach_details_hashmap.put("coach_experience", coach_experience);
-        coach_details_hashmap.put("coach_brief", coach_brief);
-        coach_details_hashmap.put("coach_mobile", coach_mobile);
-        coach_details_hashmap.put("coach_age", age);
+        if (age == 0){
+            Toast.makeText(getApplicationContext(),"Age can not be 0 years", Toast.LENGTH_SHORT).show();
+            tvDisplayDate.setError("Age can not be 0 years");
+        }
+        else {
+
+            coach_dob = tvDisplayDate.getText().toString();
+            coach_city = coach_city_et.getText().toString();
+            coach_experience = coach_experience_et.getText().toString();
+            coach_brief = coach_brief_et.getText().toString();
+            coach_mobile = coach_mobile_et.getText().toString();
+            coach_details_hashmap = new HashMap<>();
+            coach_details_hashmap.put("coach_dob", coach_dob);
+            coach_details_hashmap.put("coach_city", coach_city);
+            coach_details_hashmap.put("coach_experience", coach_experience);
+            coach_details_hashmap.put("coach_brief", coach_brief);
+            coach_details_hashmap.put("coach_mobile", coach_mobile);
+            coach_details_hashmap.put("coach_age", age);
+        }
     }
 
     public void setCurrentDateOnView() {

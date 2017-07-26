@@ -36,7 +36,7 @@ public class CoachLoginAlertDialog extends DialogFragment implements DialogInter
 
         callBackActivity = new LoginChoiceSelectionActivity();
         getKeyEditText = new EditText(getActivity());
-        getKeyEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+        getKeyEditText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Coach Login :");

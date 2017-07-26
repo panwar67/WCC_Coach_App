@@ -93,6 +93,7 @@ public class PlayerProfileEditActivity extends AppCompatActivity {
     private ArrayAdapter<CharSequence> user_bowling_skill_adapter;
 
     private HashMap<String, Object> user_edit_profile_details;
+    private HashMap<String, Object> user_edit_profile_basic_details;
 
     DatabaseReference update_player_details_databaseReference;
 
@@ -338,14 +339,19 @@ public class PlayerProfileEditActivity extends AppCompatActivity {
                     update_player_details_databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
-                    if (age <= 15) {
-                        update_player_details_databaseReference.child("all_under15_Players").child(unique_user_Id).updateChildren(user_edit_profile_details);
+                    if (age == 0){
+                        Toast.makeText(getApplicationContext(), "You seem to be underage", Toast.LENGTH_SHORT).show();
+                        tvDisplayDate.setError("Age should not be 0 years");
+                    }
+
+                    else if (age <= 15) {
+                        update_player_details_databaseReference.child("all_under15_Players").child(unique_user_Id).updateChildren(user_edit_profile_basic_details);
                         update_player_details_databaseReference.child("all_Player_Details").child(unique_user_Id).updateChildren(user_edit_profile_details);
                         update_player_details_databaseReference.child("all_under19_Players").child(unique_user_Id).removeValue();
 
                         finish();
                     } else if (age > 15 && age <= 19) {
-                        update_player_details_databaseReference.child("all_under19_Players").child(unique_user_Id).updateChildren(user_edit_profile_details);
+                        update_player_details_databaseReference.child("all_under19_Players").child(unique_user_Id).updateChildren(user_edit_profile_basic_details);
                         update_player_details_databaseReference.child("all_Player_Details").child(unique_user_Id).updateChildren(user_edit_profile_details);
                         update_player_details_databaseReference.child("all_under15_Players").child(unique_user_Id).removeValue();
 
@@ -524,6 +530,12 @@ public class PlayerProfileEditActivity extends AppCompatActivity {
         user_edit_profile_details.put("user_batting_hand", user_batting_hand);
         user_edit_profile_details.put("user_bowling_hand", user_bowling_hand);
         user_edit_profile_details.put("user_wicketkeeper", user_wicketkeeper);
+
+
+        user_edit_profile_basic_details = new HashMap<>();
+        user_edit_profile_basic_details.put("Name", username);
+        user_edit_profile_basic_details.put("UniqueUserId", unique_user_Id);
+        user_edit_profile_basic_details.put("ProfileImageUrl", userimageurl);
 
 
     }

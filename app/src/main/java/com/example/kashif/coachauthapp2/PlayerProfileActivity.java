@@ -142,7 +142,7 @@ public class PlayerProfileActivity extends AppCompatActivity {
 
 
                 player_upVotes_count = dataSnapshot.child("upVotes_to_me").getChildrenCount();
-                long player_downVotes_count = dataSnapshot.child("downVotes_to_me").getChildrenCount();
+                player_downVotes_count = dataSnapshot.child("downVotes_to_me").getChildrenCount();
                 user_name = dataSnapshot.child("Name").getValue(String.class);
                 user_image_url = dataSnapshot.child("ProfileImageUrl").getValue(String.class);
                 user_mail = dataSnapshot.child("Email").getValue(String.class);
