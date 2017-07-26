@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -33,6 +34,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.squareup.picasso.Picasso;
 
@@ -60,8 +63,10 @@ public class MainActivity extends AppCompatActivity
 
     private RecyclerView allPostsRecyclerView;
     Query query;
+    private Snackbar noPostFoundMessageSnackbar;
 
     private DatabaseReference databaseReference;
+    private StorageReference storageReference;
 
 
     @Override
@@ -77,6 +82,9 @@ public class MainActivity extends AppCompatActivity
         progressDialog.setMessage("Loading News & Posts");
         showProgressDialog();
 
+        noPostFoundMessageSnackbar = Snackbar.make(findViewById(R.id.layout_main_activity),
+                "There is No Post yet. Kindly check later", Snackbar.LENGTH_INDEFINITE);
+
         // getting the current user details from login activity
         Intent intent = getIntent();
         username = intent.getExtras().getString("username");
@@ -88,6 +96,7 @@ public class MainActivity extends AppCompatActivity
         logged_in_user_category = selectedLoginChoice;
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        storageReference = FirebaseStorage.getInstance().getReference().child("PostImage");
 
         // inserting entries into database if logging for the first time
         insertUserDetailsIntoFirebaseDB(username, usermail, userimageurl, uniqueUserId, selectedLoginChoice);
@@ -147,6 +156,25 @@ public class MainActivity extends AppCompatActivity
 
         getSupportActionBar().setTitle("News & Posts");
 
+
+        // checking if there is already some post present in database or not
+        databaseReference.child("Posts").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.getChildrenCount() == 0){
+                    noPostFoundMessageSnackbar.show();
+                    hideProgressDialog();
+                }
+                else {
+                    noPostFoundMessageSnackbar.dismiss();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });;
 
         query = databaseReference.child("Posts").orderByChild("Post_timestamp");
 
@@ -345,6 +373,7 @@ public class MainActivity extends AppCompatActivity
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         databaseReference.child("Posts").child(String.valueOf(model.getPost_timestamp())).removeValue();
+                                        storageReference.child(String.valueOf(model.getPost_timestamp())).delete();
                                         notifyDataSetChanged();
                                     }
                                 });

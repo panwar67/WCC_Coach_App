@@ -130,43 +130,45 @@ public class AddNewPostActivity extends AppCompatActivity {
         }
     }
 
+    // method on post button click listener
     public void posting() {
 
 
         final String post_title = blog_title_et.getText().toString().trim();
         final String post_description = blog_description_et.getText().toString().trim();
 
+        Calendar c = Calendar.getInstance();
+
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String formattedDate = df.format(c.getTime());
+        String[] metadata = formattedDate.split(" ");
+        String date = metadata[0];
+        String time = metadata[1];
+        long timestamp = System.currentTimeMillis();
+
+        long newTime = -1 * timestamp;
+        final String string_timestamp = String.valueOf(newTime);
+
+
+        posts_detail_hash_map = new HashMap<>();
+        posts_detail_hash_map.put("Post_Time", time);
+        posts_detail_hash_map.put("Post_date", date);
+        posts_detail_hash_map.put("Post_timestamp", newTime);
+
         if (!TextUtils.isEmpty(post_title) && !TextUtils.isEmpty(post_description) && uri_image_final != null) {
 
             showProgressDialog();
-            StorageReference filePathNew = storageReference.child("PostImage").child(uri_image_final.getLastPathSegment());
+            StorageReference filePathNew = storageReference.child("PostImage").child(string_timestamp);
 
             filePathNew.putFile(Uri.fromFile(new File(filePath))).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                     Uri downloadUri = taskSnapshot.getDownloadUrl();
-
-                    Calendar c = Calendar.getInstance();
-
-                    SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                    String formattedDate = df.format(c.getTime());
-                    String[] metadata = formattedDate.split(" ");
-                    String date = metadata[0];
-                    String time = metadata[1];
-                    long timestamp = taskSnapshot.getMetadata().getCreationTimeMillis();
-
-                    long newTime = -1 * timestamp;
-                    String string_timestamp = String.valueOf(newTime);
-
-
-                    posts_detail_hash_map = new HashMap<>();
+                    posts_detail_hash_map.put("Post_Image", downloadUri.toString());
                     posts_detail_hash_map.put("Post_Title", post_title);
                     posts_detail_hash_map.put("Post_Description", post_description);
-                    posts_detail_hash_map.put("Post_Image", downloadUri.toString());
-                    posts_detail_hash_map.put("Post_Time", time);
-                    posts_detail_hash_map.put("Post_date", date);
-                    posts_detail_hash_map.put("Post_timestamp", newTime);
+
                     databaseReference.child(string_timestamp).setValue(posts_detail_hash_map);
 
                     hideProgressDialog();
@@ -181,28 +183,11 @@ public class AddNewPostActivity extends AppCompatActivity {
 
             else if (!TextUtils.isEmpty(post_title) && !TextUtils.isEmpty(post_description) && uri_image_final == null){
 
-            Calendar c = Calendar.getInstance();
-
-            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String formattedDate = df.format(c.getTime());
-            String[] metadata = formattedDate.split(" ");
-            String date = metadata[0];
-            String time = metadata[1];
-            long timestamp = System.currentTimeMillis();
-
-            long newTime = -1 * timestamp;
-            String string_timestamp = String.valueOf(newTime);
-
-
-            posts_detail_hash_map = new HashMap<>();
             posts_detail_hash_map.put("Post_Title", post_title);
             posts_detail_hash_map.put("Post_Description", post_description);
             posts_detail_hash_map.put("Post_Image", "NULL");
-            posts_detail_hash_map.put("Post_Time", time);
-            posts_detail_hash_map.put("Post_date", date);
-            posts_detail_hash_map.put("Post_timestamp", newTime);
-            databaseReference.child(string_timestamp).setValue(posts_detail_hash_map);
 
+            databaseReference.child(string_timestamp).setValue(posts_detail_hash_map);
             Toast.makeText(AddNewPostActivity.this, "uploaded successfully", Toast.LENGTH_SHORT).show();
             deleteDir(myAppFolder);
             finish();
@@ -228,7 +213,6 @@ public class AddNewPostActivity extends AppCompatActivity {
             uri_image_final = Uri.parse(filePath);
 
             blog_image_iv.setImageURI(uri_image_final);
-            String uri = uri_image_final.toString();
 
         } else if (requestCode == REQUEST_CAMERA && resultCode == RESULT_OK) {
 
