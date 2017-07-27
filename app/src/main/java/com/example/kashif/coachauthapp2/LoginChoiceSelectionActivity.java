@@ -19,7 +19,8 @@ public class LoginChoiceSelectionActivity extends AppCompatActivity implements C
 
     // on coach login click show Alert Dialog
     public void showCoachLoginAlertDialog(View view) {
-        CoachLoginAlertDialog coachLoginAlertDialog = new CoachLoginAlertDialog(this);
+        CoachLoginAlertDialog coachLoginAlertDialog = new CoachLoginAlertDialog();
+        coachLoginAlertDialog.coachLoginAlertDialogInterface = this;
         coachLoginAlertDialog.show(getSupportFragmentManager(), "Coach Login Alert");
     }
 

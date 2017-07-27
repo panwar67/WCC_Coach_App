@@ -25,10 +25,6 @@ public class CoachLoginAlertDialog extends DialogFragment implements DialogInter
 
     }
 
-    public CoachLoginAlertDialog(CoachLoginAlertDialogInterface coachLoginAlertDialogInterface){
-        this.coachLoginAlertDialogInterface = coachLoginAlertDialogInterface;
-    }
-
 
     @NonNull
     @Override
