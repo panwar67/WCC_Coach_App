@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:background="#f9c2c2"
-    tools:context="com.example.kashif.coachauthapp2.SelectTeamActivity">
+    tools:context="com.example.kashif.coachauthapp2.TeamDetails.SelectTeamActivity">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/all_players_list_recycler_view"
         android:layout_width="match_parent"

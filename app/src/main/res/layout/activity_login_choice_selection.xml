@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="#000"
-    tools:context="com.example.kashif.coachauthapp2.LoginChoiceSelectionActivity">
+    tools:context="com.example.kashif.coachauthapp2.LoginActivities.LoginChoiceSelectionActivity">
 
 
     <LinearLayout

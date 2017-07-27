@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.SplashScreen;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.kashif.coachauthapp2.HomeScreenActivity.MainActivity;
+import com.example.kashif.coachauthapp2.LoginActivities.LoginChoiceSelectionActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

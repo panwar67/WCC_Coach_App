@@ -1,10 +1,10 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.CoachDetails;
 
 /**
  * Created by kashif on 23/7/17.
  */
 
-class AllCoachListModels {
+public class AllCoachListModels {
 
     public AllCoachListModels() {
 

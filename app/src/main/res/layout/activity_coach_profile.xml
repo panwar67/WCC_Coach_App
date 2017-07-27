@@ -9,7 +9,7 @@
     android:background="#FF232222"
     android:orientation="vertical"
 
-    tools:context="com.example.kashif.coachauthapp2.CoachProfileActivity">
+    tools:context="com.example.kashif.coachauthapp2.CoachDetails.CoachProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"

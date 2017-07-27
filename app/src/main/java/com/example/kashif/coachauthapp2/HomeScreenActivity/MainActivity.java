@@ -1,11 +1,10 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.HomeScreenActivity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -25,6 +24,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kashif.coachauthapp2.CoachDetails.AllCoachListActivity;
+import com.example.kashif.coachauthapp2.CoachDetails.CoachProfileActivity;
+import com.example.kashif.coachauthapp2.LoginActivities.LoginChoiceSelectionActivity;
+import com.example.kashif.coachauthapp2.NewsAndPostDetails.AddNewPostActivity;
+import com.example.kashif.coachauthapp2.NewsAndPostDetails.AllPostsModel;
+import com.example.kashif.coachauthapp2.PlayerDetails.AllPlayersListActivity;
+import com.example.kashif.coachauthapp2.PlayerDetails.PlayerProfileActivity;
+import com.example.kashif.coachauthapp2.R;
+import com.example.kashif.coachauthapp2.TeamDetails.SelectTeamActivity;
+import com.example.kashif.coachauthapp2.TeamDetails.ShowTeamActivity;
 import com.facebook.login.LoginManager;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;

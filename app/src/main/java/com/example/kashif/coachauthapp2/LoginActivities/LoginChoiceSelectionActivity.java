@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.LoginActivities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,6 +6,8 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.kashif.coachauthapp2.R;
 
 public class LoginChoiceSelectionActivity extends AppCompatActivity implements CoachLoginAlertDialogInterface {
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.kashif.coachauthapp2.CoachProfileEditActivity">
+    tools:context="com.example.kashif.coachauthapp2.CoachDetails.CoachProfileEditActivity">
 
 
     <LinearLayout

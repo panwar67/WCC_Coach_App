@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.UpAndDownVotersListActivity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -12,6 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.kashif.coachauthapp2.CoachDetails.AllCoachListModels;
+import com.example.kashif.coachauthapp2.CoachDetails.CoachProfileActivity;
+import com.example.kashif.coachauthapp2.HomeScreenActivity.MainActivity;
+import com.example.kashif.coachauthapp2.PlayerDetails.PlayerProfileActivity;
+import com.example.kashif.coachauthapp2.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.LoginActivities;
 
 /**
  * Created by kashif on 18/7/17.

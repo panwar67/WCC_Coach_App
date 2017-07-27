@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.CoachDetails;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kashif.coachauthapp2.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;

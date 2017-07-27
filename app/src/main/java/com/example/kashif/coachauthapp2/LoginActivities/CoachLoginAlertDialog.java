@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.LoginActivities;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -9,6 +9,9 @@ import android.support.v7.app.AlertDialog;
 import android.text.InputType;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.kashif.coachauthapp2.LoginActivities.CoachLoginAlertDialogInterface;
+import com.example.kashif.coachauthapp2.LoginActivities.LoginChoiceSelectionActivity;
 
 /**
  * Created by kashif on 18/7/17.

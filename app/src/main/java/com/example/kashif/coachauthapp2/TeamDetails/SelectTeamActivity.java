@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.TeamDetails;
 
 import android.app.ProgressDialog;
 import android.support.design.widget.Snackbar;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.kashif.coachauthapp2.PlayerDetails.AllPlayersListModel;
+import com.example.kashif.coachauthapp2.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

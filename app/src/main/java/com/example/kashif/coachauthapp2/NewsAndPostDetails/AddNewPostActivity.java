@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.NewsAndPostDetails;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.example.kashif.coachauthapp2.R;
+import com.example.kashif.coachauthapp2.StoragePermissionClass.Utility;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -116,7 +118,7 @@ public class AddNewPostActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
-            case com.example.kashif.coachauthapp2.Utility.MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE:
+            case Utility.MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     createAppFolder();
                     if (userChoosenTask.equals("Take Photo"))
@@ -251,7 +253,7 @@ public class AddNewPostActivity extends AppCompatActivity {
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
-                boolean result= com.example.kashif.coachauthapp2.Utility.checkPermission(AddNewPostActivity.this);
+                boolean result= Utility.checkPermission(AddNewPostActivity.this);
 
                 if (items[item].equals("Take Photo")) {
                     userChoosenTask ="Take Photo";

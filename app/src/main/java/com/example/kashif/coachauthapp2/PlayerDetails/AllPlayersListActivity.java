@@ -1,17 +1,18 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.PlayerDetails;
 
 import android.app.ProgressDialog;
 import android.app.SearchManager;
+import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.kashif.coachauthapp2.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

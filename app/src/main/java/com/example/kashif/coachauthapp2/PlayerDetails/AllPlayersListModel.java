@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.PlayerDetails;
 
 /**
  * Created by kashif on 23/7/17.

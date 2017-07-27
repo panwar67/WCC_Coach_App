@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.CoachDetails;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.kashif.coachauthapp2.HomeScreenActivity.MainActivity;
+import com.example.kashif.coachauthapp2.R;
+import com.example.kashif.coachauthapp2.UpAndDownVotersListActivity.ShowUpAndDownVoteGiversListActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

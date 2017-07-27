@@ -1,4 +1,4 @@
-package com.example.kashif.coachauthapp2;
+package com.example.kashif.coachauthapp2.StoragePermissionClass;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
