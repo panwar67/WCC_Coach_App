@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    android:background="#a9a9a9"
+    android:background="#aeaeae"
     android:padding="8dp"
     android:id="@+id/layout_main_activity"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
