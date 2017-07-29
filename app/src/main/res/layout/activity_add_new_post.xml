@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#f9c2c2"
+    android:background="#c9c7c7"
     tools:context="com.example.kashif.coachauthapp2.NewsAndPostDetails.AddNewPostActivity">
 
     <ScrollView

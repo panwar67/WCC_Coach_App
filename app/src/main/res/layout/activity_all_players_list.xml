@@ -7,7 +7,7 @@
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
     android:id="@+id/all_players_list_layout"
-    android:background="#f9c2c2"
+    android:background="#c9c7c7"
     tools:context="com.example.kashif.coachauthapp2.AllPlayersListActivity">
 
 
